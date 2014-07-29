@@ -12,9 +12,11 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(AppConfig.class);
         if (new CloudFoundryConnector().isInMatchingCloud()) {
-            System.setProperty("spring.profiles.active", "cloud");
+            app.setAdditionalProfiles("cloud");
         }
-        SpringApplication.run(AppConfig.class, args);
+        app.run(args);
     }
+    
 }

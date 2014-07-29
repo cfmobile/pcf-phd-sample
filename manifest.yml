@@ -1,0 +1,9 @@
+---
+applications:
+ - name: pcf-phd-sample
+   memory: 512M
+   instances: 1
+   buildpack: https://github.com/spring-io/java-buildpack
+   path: build/libs/pcf-phd-sample-0.0.1-SNAPSHOT.jar
+   services:
+    - nfl-hadoop

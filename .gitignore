@@ -4,3 +4,7 @@ out
 *.iml
 *.ipr
 *.iws
+/bin
+.classpath
+.project
+.settings
